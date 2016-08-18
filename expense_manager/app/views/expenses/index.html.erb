@@ -1,0 +1,7 @@
+<h1>All expenses</h1>
+
+<ul class="all_expenses">
+  <% @expenses.each do |expense| %>
+    <li><%= expense.value %> - <%= link_to "Open", expense_path(expense.id) %></li>
+  <% end %>
+</ul>
